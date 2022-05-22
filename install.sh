@@ -9,3 +9,5 @@ cp backup-nextcloud-prepare.sh backup-nextcloud-finish.sh /usr/bin/
 
 ./install-service.sh autorestic
 ./install-service.sh autorestic-prune
+
+autorestic -c /etc/autorestic/config.yml check
