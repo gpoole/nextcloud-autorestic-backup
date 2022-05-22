@@ -1,0 +1,17 @@
+version: 2
+
+backends:
+  remote:
+    # XYZ config info here
+
+locations:
+  nextcloud:
+    from: /var/snap/nextcloud/common/backups/current
+    to:
+    - remote
+    hooks:
+      before:
+      - /usr/bin/backup-nextcloud-prepare.sh
+      after:
+      - /usr/bin/backup-nextcloud-finish.sh
+    cron: 0 4 * * 0

@@ -1,0 +1,9 @@
+[Unit]
+Description=Run autorestic cron task
+
+[Timer]
+Unit=autorestic.service
+OnCalendar=*:0/15
+
+[Install]
+WantedBy=timers.target

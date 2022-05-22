@@ -1,0 +1,6 @@
+[Unit]
+Description=Runs autorestic cron
+Wants=autorestic.timer
+
+[Service]
+ExecStart=autorestic --ci cron -c /etc/autorestic/config.yml
